@@ -18,15 +18,15 @@ $ ./rsa
 
 ### Console Arguments:
 ```console
-./rsa file                      # encript and decript file 
-./rsa file -t                   # show elapsed time
-./rsa file -t -d                # show the public keys
-./rsa file -t -d -b             # break the public key
-./rsa file -t -d -b --sz v      # set the public key bit size to v
+$ ./rsa file                      # encript and decript file 
+$ ./rsa file -t                   # show elapsed time
+$ ./rsa file -d                   # show the public keys
+$ ./rsa file -d -b                # break the public key
+$ ./rsa file --sz v               # set the public key bit size to v
 ```
 
-### Break Speed
-![Time](https://i.imgur.com/0oqPxJ0.png)
+### Encription Speed
+![Time](/plotting/time_test.png)
 
 ### Break Speed
-![Time](https://i.imgur.com/0oqPxJ0.png)
+![Time](/plotting/time_break.png)
