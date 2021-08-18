@@ -32,12 +32,16 @@ def get_data(path, cols):
     with open(path, "r") as file:
         while True:
             try:
-                bit_sz = int(file.readline().split()[1])
-            except (EOFError, IndexError):
+                li = file.readline().split()
+                if len(li) == 0:
+                    break
+            except (EOFError):
                 break
-            for t in range(10):
-                li = [int(i) for i in file.readline().split()]
-                data.append([bit_sz] + li)
+            
+            if li[0] == "test":
+                bit_sz = int(li[1])
+            else:
+                data.append([bit_sz] + [int(i) for i in li])
     return pd.DataFrame(data, columns=["bit_sz"] + cols)
 
 
